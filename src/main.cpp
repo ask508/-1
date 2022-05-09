@@ -43,11 +43,11 @@ int main(int argc, char* argv[])
     SDL_FreeSurface(pTempSurface);
 		rectImage = { 0, 0, 128, 82 };
 
-	// SDL TTF
-    SDL_Color color_Blue = { 0, 0, 255 };
+	// SDL TTF 글 색깔 
+    SDL_Color color_Blue = { 255, 0, 255 };
     SDL_Color color_White = { 255, 255, 255 };
 #ifdef UNICODE
-    SDL_Surface* temp_surf = TTF_RenderUNICODE_Shaded(m_pFont, (Uint16*)L"한글 텍스쳐", color_Blue, color_White);
+    SDL_Surface* temp_surf = TTF_RenderUNICODE_Shaded(m_pFont, (Uint16*)L"ㅇㅇㅇㅇ", color_Blue, color_White);
 #else
     SDL_Surface* temp_surf = TTF_RenderUTF8_Shaded(m_pFont, "한글 텍스쳐", color_Blue, color_White);
 #endif
@@ -181,7 +181,7 @@ void render()
     SDL_RenderCopy(g_pRenderer, texureImage, &rectImage, &rectImage);
     SDL_RenderCopy(g_pRenderer, texureText, &rectText, &rectText);
 
-    filledCircleColor(g_pRenderer, 300, 300, 50, 0xFFFF0000);
+    filledCircleColor(g_pRenderer, 300, 300, 100, 0xFFFF0000);
 
     SDL_RenderPresent(g_pRenderer);
 }
