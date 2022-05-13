@@ -68,7 +68,7 @@ int main(int argc, char* argv[])
         return false;
     }
 
-		// 볼륨 설정, -1은 모든 채널
+	// 볼륨 설정, -1은 모든 채널
     Mix_Volume(-1, 128);
 	
 	
